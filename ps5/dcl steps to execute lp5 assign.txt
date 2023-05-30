@@ -1,0 +1,35 @@
+cd mnt/e/BE/academics/lp5/a2
+
+Assignment 1:
+terminal1:
+1. rmic AddServerImpl
+terminal2:
+1. rmiregistry
+terminal3:
+1.java AddServer
+terminal4:
+1. java AddClient 127.0.0.1 2 5
+
+
+Assignment 2:
+first terminal:
+1. idlj -fall ReverseModule.idl
+2. javac *.java ReverseModule/*.java
+3. orbd -ORBInitialPort 1050&
+4. java ReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+second (client) terminal:
+1. java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+
+Assignment 3:
+NOTE: (1-4) to be done only once to configure the setup. dont repeat everytime
+1. Download mpj express software explicitly from browser
+2. extract files onto the assignment folder (already done here)
+3. export MPJ_HOME=mpj-v0_44   (for setting env variable)
+4. export PATH=$MPJ_HOME/bin:$PATH   (for setting path)
+
+
+5. javac -cp $MPJ_HOME/lib/mpj.jar ScatterGather.java   (to compile)
+6. $MPJ_HOME/bin/mpjrun.sh -np 4 ScatterGather   (to execute)
+

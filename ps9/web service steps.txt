@@ -1,0 +1,28 @@
+Server steps
+
+1. new project.. jawa web.. web app
+2. project-name.. check if 4.1.1 & EE7 web
+3. project-name.. right click.. new..webservice
+4. webservice name.. pkg: com.services
+5. in this java code, delete the entire @WebMethod code
+6. webservice name.. rightclick.. add operation
+7. operation-name, return type int, parameter num1 num2, null(change in code)
+8. project-name.. clean&build,
+9. project-name.. deploy
+10. service-name..  test service
+
+Client steps:
+1. newproject.. java web.. web application
+2. edit html file: add form
+
+<form action="Calculator">
+<input type="text" name="txt1" value=" "/>
+<input type="text" name="txt2" value=" "/>
+<input type="submit" value="Submit"/>
+</form>
+
+3. project .. new .. web service client
+browse.. webservice for first project
+4. source pkg.. new.. servlet(form action-name)
+5. checkbox tick
+6. code in java file, drag the web service in java code
